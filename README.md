@@ -17,7 +17,13 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **Ukash:** referenced payments with a vouchers without bank data.
 * **Paynet reference:** generates reference barcodes for pay over internet without bank card data.
 
-## The integration can be made like this:
+## Installation
+1. Get the code
+  * `git clone https://github.com/Telepay/PHP-SDK.git`
+2. Import the autoloader
+  * `require_once('TelepayApi/tp_autoloader.php');`
+
+## Basic sample
 ```
 <?php
 require_once('TelepayApi/tp_autoloader.php');
