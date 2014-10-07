@@ -13,8 +13,8 @@ class BaseService {
     private $env;
 
     static $TELEPAY_MODE_URLS = array(
-        'test' => 'http://dev-api.telepay.net/app_dev.php/test',
-        'real' => 'http://dev-api.telepay.net/app_dev.php'
+        'test' => 'https://api.telepay.net/test',
+        'real' => 'https://api.telepay.net'
     );
 
     public function __construct(Credentials $credentials, $env){
