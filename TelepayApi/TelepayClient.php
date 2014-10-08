@@ -11,6 +11,7 @@ use TelepayApi\Services\Sample;
 use TelepayApi\Services\ToditoCash;
 use TelepayApi\Services\Ukash;
 use TelepayApi\Services\UkashRedemption;
+use TelepayApi\Services\UkashGenerate;
 
 
 class TelepayClient{
@@ -57,6 +58,10 @@ class TelepayClient{
 
     public function getUkashRedemption(){
         return new UkashRedemption($this->credentials, $this->env);
+    }
+
+    public function getUkashGenerate(){
+        return new UkashGenerate($this->credentials, $this->env);
     }
 
 }
