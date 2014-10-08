@@ -20,4 +20,20 @@ class UkashRedemption extends BaseService {
         );
     }
 
+    public function status($transaction_id,$currency,$voucher_value,$voucher_number,$transaction_amount){
+        return $this->call(
+            'services/v1/ukash/redemption/status',
+            array(
+                'transaction_id'        =>  $transaction_id,
+                'currency'              =>  $currency,
+                'voucher_value'         =>  $voucher_value,
+                'voucher_number'        =>  $voucher_number,
+                'transaction_amount'    =>  $transaction_amount
+            ),
+            'GET',
+            array(),
+            array()
+        );
+    }
+
 }
