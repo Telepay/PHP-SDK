@@ -12,6 +12,7 @@ use TelepayApi\Services\ToditoCash;
 use TelepayApi\Services\Ukash;
 use TelepayApi\Services\UkashRedemption;
 use TelepayApi\Services\UkashGenerate;
+use TelepayApi\Services\MultivaTpv;
 
 
 class TelepayClient{
@@ -62,6 +63,10 @@ class TelepayClient{
 
     public function getUkashGenerate(){
         return new UkashGenerate($this->credentials, $this->env);
+    }
+
+    public function getMultiva(){
+        return new MultivaTpv($this->credentials, $this->env);
     }
 
 }
