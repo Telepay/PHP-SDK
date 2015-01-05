@@ -2,6 +2,7 @@
 namespace TelepayApi;
 
 use TelepayApi\Core\Credentials;
+use TelepayApi\Services\HalcashSP;
 use TelepayApi\Services\Pademobile;
 use TelepayApi\Services\Paynetref;
 use TelepayApi\Services\Paynetservices;
@@ -67,6 +68,10 @@ class TelepayClient{
 
     public function getMultiva(){
         return new MultivaTpv($this->credentials, $this->env);
+    }
+
+    public function getHalcash(){
+        return new HalcashSP($this->credentials, $this->env);
     }
 
 }

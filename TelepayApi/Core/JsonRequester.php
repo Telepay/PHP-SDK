@@ -4,16 +4,23 @@ namespace TelepayApi\Core;
 class JsonRequester implements Requester {
 
     public function send(Request $request){
-        $ch = curl_init(
+
+        $functionUrl =
             $request->getBaseUrl().'/'
-            .$request->getFunction().'?'
-            .http_build_query($request->getUrlParams())
-        );
+            .$request->getFunction();
+
+        if(count($request->getUrlParams())>0)
+            $finalUrl = $functionUrl.'?'.http_build_query($request->getUrlParams());
+        else $finalUrl = $functionUrl;
+
+
+        $ch = curl_init($finalUrl);
 
         $headerArray = [];
         foreach($request->getHeaders() as $key => $value){
             $headerArray[]=ucfirst($key).': '.$value;
         }
+
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headerArray);
 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
