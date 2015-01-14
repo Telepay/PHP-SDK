@@ -10,12 +10,15 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 ## The currently implemented services are:
 * **Sample Service:** for testing the right connection to the API
 * **PagoFacil:** Credit and Debit bank card processing
-* **Paynet Payment of services:** gives a way for pay many common services in Mexico
+* **Paynet Payment of services:** gives a way for paying many common services in Mexico
 * **PayU:** a way for pay services in 7eleven and Oxxo, Mexico
 * **SafetyPay:** online payments with your online banking credentials.
-* **ToditoCash:** mexican pre-charged wallet for pay services and products online.
+* **ToditoCash:** mexican pre-charged wallet for paying services and products online.
 * **Ukash:** referenced payments with a vouchers without bank data.
-* **Paynet reference:** generates reference barcodes for pay over internet without bank card data.
+* **Paynet reference:** generates reference barcodes for paying over internet without bank card data.
+* **Halcash Spain:** sends a hal to a phone.
+* **Multiva TPV:** generates a Virtual Tpv for payments with credit card.
+* **Pademobile:** online payments with your online banking credentials.
 
 ## Installation
 1. Get the code
