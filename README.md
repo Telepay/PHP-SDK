@@ -16,7 +16,7 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **ToditoCash:** mexican pre-charged wallet for paying services and products online.
 * **Ukash:** referenced payments with a vouchers without bank data.
 * **Paynet reference:** generates reference barcodes for paying over internet without bank card data.
-* **Halcash Spain:** sends a hal to a phone.
+* **Halcash Spain:** sends a hal to a phone or cancel a ticket.
 * **Multiva TPV:** generates a Virtual Tpv for payments with credit card.
 * **Pademobile:** online payments with your online banking credentials.
 

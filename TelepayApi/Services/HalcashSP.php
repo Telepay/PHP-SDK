@@ -22,4 +22,18 @@ class HalcashSP extends BaseService {
         );
     }
 
+    public function cancel($country,$reference,$ticket){
+        return $this->call(
+            'services/v1/halcash/cancel',
+            array(),
+            'POST',
+            array(
+                'country'           =>  $country,
+                'reference'         =>  $reference,
+                'ticket'            =>  $ticket
+            ),
+            array()
+        );
+    }
+
 }
