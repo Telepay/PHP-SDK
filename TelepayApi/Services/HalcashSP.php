@@ -3,9 +3,9 @@ namespace TelepayApi\Services;
 
 class HalcashSP extends BaseService {
 
-    public function send($phone,$prefix,$country,$amount,$reference,$pin,$transaction_id){
+    public function send($phone,$prefix,$country,$amount,$reference,$pin,$transaction_id,$alias){
         return $this->call(
-            'services/v1/halcash/send',
+            'services/v2/halcash/send',
             array(),
             'POST',
             array(
@@ -15,7 +15,8 @@ class HalcashSP extends BaseService {
                 'reference'         =>  $reference,
                 'pin'               =>  $pin,
                 'transaction_id'    =>  $transaction_id,
-                'phone_prefix'      =>  $prefix
+                'phone_prefix'      =>  $prefix,
+                'alias'             =>  $alias
             ),
             array()
         );
