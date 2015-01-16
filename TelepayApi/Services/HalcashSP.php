@@ -26,7 +26,7 @@ class HalcashSP extends BaseService {
         return $this->call(
             'services/v1/halcash/cancel',
             array(),
-            'POST',
+            'PUT',
             array(
                 'country'           =>  $country,
                 'reference'         =>  $reference,
