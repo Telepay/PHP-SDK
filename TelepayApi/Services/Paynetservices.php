@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class Paynetservices extends BaseService {
 
-    public function info($date,$hour,$transaction,$sku,$reference){
+    public function info($date,$hour,$transaction,$sku,$reference,$amount){
         return $this->call(
             'services/v1/paynet/payment/info',
             array(),
@@ -13,13 +13,14 @@ class Paynetservices extends BaseService {
                 'hour'              =>  $hour,
                 'transaction_id'    =>  $transaction,
                 'sku'               =>  $sku,
-                'reference'         =>  $reference
+                'reference'         =>  $reference,
+                'amount'            =>  $amount
             ),
             array()
         );
     }
 
-    public function ejecuta($local_date,$local_hour,$transaction_id,$sku,$fee,$reference,$amount,$dv){
+    public function ejecuta($local_date,$local_hour,$transaction_id,$sku,$fee,$reference,$amount,$dv,$token){
         return $this->call(
             'services/v1/paynet/payment/transaction',
             array(),
@@ -32,7 +33,8 @@ class Paynetservices extends BaseService {
                 'fee'           =>  $fee,
                 'reference'     =>  $reference,
                 'amount'        =>  $amount,
-                'dv'            =>  $dv
+                'dv'            =>  $dv,
+                'token'         =>  $token
             ),
             array()
         );
