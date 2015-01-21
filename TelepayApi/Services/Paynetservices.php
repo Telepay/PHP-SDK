@@ -20,7 +20,7 @@ class Paynetservices extends BaseService {
         );
     }
 
-    public function ejecuta($local_date,$local_hour,$transaction_id,$sku,$fee,$reference,$amount,$dv,$token){
+    public function transaction($local_date,$local_hour,$transaction_id,$sku,$fee,$reference,$amount,$dv,$token){
         return $this->call(
             'services/v1/paynet/payment/transaction',
             array(),
