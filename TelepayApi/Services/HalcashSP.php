@@ -39,6 +39,23 @@ class HalcashSP extends BaseService {
         );
     }
 
+    public function sendV3($phone,$prefix,$country,$amount,$reference,$pin){
+        return $this->call(
+            'services/v3/halcash_send',
+            array(),
+            'POST',
+            array(
+                'phone_number'      =>  $phone,
+                'country'           =>  $country,
+                'amount'            =>  $amount,
+                'reference'         =>  $reference,
+                'pin'               =>  $pin,
+                'phone_prefix'      =>  $prefix,
+            ),
+            array()
+        );
+    }
+
     public function cancel($country,$reference,$id_telepay){
         return $this->call(
             'services/v1/halcash/cancel',

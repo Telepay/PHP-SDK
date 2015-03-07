@@ -2,14 +2,18 @@
 namespace TelepayApi;
 
 use TelepayApi\Core\Credentials;
+use TelepayApi\Services\Bitcoin;
+use TelepayApi\Services\Faircoin;
 use TelepayApi\Services\HalcashSP;
 use TelepayApi\Services\Pademobile;
 use TelepayApi\Services\Paynetref;
 use TelepayApi\Services\Paynetservices;
 use TelepayApi\Services\PayU;
+use TelepayApi\Services\SabadellTpv;
 use TelepayApi\Services\Safetypay;
 use TelepayApi\Services\Sample;
 use TelepayApi\Services\ToditoCash;
+use TelepayApi\Services\TransactionStatus;
 use TelepayApi\Services\Ukash;
 use TelepayApi\Services\UkashRedemption;
 use TelepayApi\Services\UkashGenerate;
@@ -70,8 +74,24 @@ class TelepayClient{
         return new MultivaTpv($this->credentials, $this->env);
     }
 
+    public function getSabadell(){
+        return new SabadellTpv($this->credentials, $this->env);
+    }
+
     public function getHalcash(){
         return new HalcashSP($this->credentials, $this->env);
+    }
+
+    public function getTransactionStatus(){
+        return new TransactionStatus($this->credentials, $this->env);
+    }
+
+    public function getBitcoin(){
+        return new Bitcoin($this->credentials, $this->env);
+    }
+
+    public function getFaircoin(){
+        return new Faircoin($this->credentials, $this->env);
     }
 
 }
