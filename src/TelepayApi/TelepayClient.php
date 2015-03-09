@@ -23,75 +23,75 @@ use TelepayApi\Services\MultivaTpv;
 class TelepayClient{
 
     private $credentials;
-    private $env;
+    private $url;
 
-    public function __construct(Credentials $credentials, $env = 'test'){
+    public function __construct(Credentials $credentials, $url = 'https://api.telepay.net/test'){
         $this->credentials=$credentials;
-        $this->env = $env;
+        $this->url = $url;
     }
 
     public function getSample(){
-        return new Sample($this->credentials, $this->env);
+        return new Sample($this->credentials, $this->url);
     }
 
     public function getUkash(){
-        return new Ukash($this->credentials, $this->env);
+        return new Ukash($this->credentials, $this->url);
     }
 
     public function getToditoCash(){
-        return new ToditoCash($this->credentials, $this->env);
+        return new ToditoCash($this->credentials, $this->url);
     }
 
     public function getSafetypay(){
-        return new Safetypay($this->credentials, $this->env);
+        return new Safetypay($this->credentials, $this->url);
     }
 
     public function getPaynetref(){
-        return new Paynetref($this->credentials, $this->env);
+        return new Paynetref($this->credentials, $this->url);
     }
 
     public function getPaynetservices(){
-        return new Paynetservices($this->credentials, $this->env);
+        return new Paynetservices($this->credentials, $this->url);
     }
 
     public function getPayU(){
-        return new PayU($this->credentials, $this->env);
+        return new PayU($this->credentials, $this->url);
     }
 
     public function getPademobile(){
-        return new Pademobile($this->credentials, $this->env);
+        return new Pademobile($this->credentials, $this->url);
     }
 
     public function getUkashRedemption(){
-        return new UkashRedemption($this->credentials, $this->env);
+        return new UkashRedemption($this->credentials, $this->url);
     }
 
     public function getUkashGenerate(){
-        return new UkashGenerate($this->credentials, $this->env);
+        return new UkashGenerate($this->credentials, $this->url);
     }
 
     public function getMultiva(){
-        return new MultivaTpv($this->credentials, $this->env);
+        return new MultivaTpv($this->credentials, $this->url);
     }
 
     public function getSabadell(){
-        return new SabadellTpv($this->credentials, $this->env);
+        return new SabadellTpv($this->credentials, $this->url);
     }
 
     public function getHalcash(){
-        return new HalcashSP($this->credentials, $this->env);
+        return new HalcashSP($this->credentials, $this->url);
     }
 
     public function getTransactionStatus(){
-        return new TransactionStatus($this->credentials, $this->env);
+        return new TransactionStatus($this->credentials, $this->url);
     }
 
     public function getBitcoin(){
-        return new Bitcoin($this->credentials, $this->env);
+        return new Bitcoin($this->credentials, $this->url);
     }
 
     public function getFaircoin(){
-        return new Faircoin($this->credentials, $this->env);
+        return new Faircoin($this->credentials, $this->url);
     }
 
 }

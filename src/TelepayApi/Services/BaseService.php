@@ -10,22 +10,21 @@ use TelepayApi\Core\SignerV1;
 class BaseService {
 
     private $credentials;
-    private $env;
+    private $url;
 
-    static $TELEPAY_MODE_URLS = array(
-        'test' => 'https://api.telepay.net/test',
-        'real' => 'https://api.telepay.net'
-    );
-
-    public function __construct(Credentials $credentials, $env){
+    public function __construct(Credentials $credentials, $url){
         $this->credentials = $credentials;
-        $this->env = $env;
+        $this->url = $url;
     }
 
     protected function call($function,$urlParams,$method,$params,$headers){
         $plainRequest = new ApiRequest(
-            BaseService::$TELEPAY_MODE_URLS[$this->env],
-            $function,$urlParams,$method,$params,$headers
+            $this->url,
+            $function,
+            $urlParams,
+            $method,
+            $params,
+            $headers
         );
         $signer = new SignerV1($this->credentials);
         $signedRequest = $signer->sign($plainRequest);
