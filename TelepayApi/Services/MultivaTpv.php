@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class MultivaTpv extends BaseService {
 
-    public function generate($amount,$transaction_id,$url_notification){
+    public function generate($amount,$url_notification){
         return $this->call(
             'services/v1/multiva',
             array(),

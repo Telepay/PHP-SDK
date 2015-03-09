@@ -5,7 +5,7 @@ class Paynetref extends BaseService {
 
     public function request($client_reference,$amount,$description){
         return $this->call(
-            'services/v1/paynet/reference/generate',
+            'services/v1/paynet_reference',
             array(),
             'POST',
             array(
@@ -19,7 +19,7 @@ class Paynetref extends BaseService {
 
     public function status($client_reference){
         return $this->call(
-            'services/v1/paynet/reference/status',
+            'services/v1/paynet_reference',
             array(
                 'client_reference' =>  $client_reference
             ),
