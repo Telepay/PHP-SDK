@@ -3,14 +3,15 @@ namespace TelepayApi\Services;
 
 class Bitcoin extends BaseService {
 
-    public function request($satoshis,$confirmations){
+    public function request($satoshis,$confirmations,$expiresIn){
         return $this->call(
             'services/v1/btc_pay',
             array(),
             'POST',
             array(
                 'amount'      =>  $satoshis,
-                'confirmations' =>  $confirmations
+                'confirmations' =>  $confirmations,
+                'expires_in' =>  $expiresIn
             ),
             array()
         );
