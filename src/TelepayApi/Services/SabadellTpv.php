@@ -22,7 +22,7 @@ class SabadellTpv extends BaseService {
 
     public function generateV2($amount,$description,$url_notification,$url_ok,$url_ko){
         return $this->call(
-            'services/v1/sabadell',
+            'services/v2/sabadell',
             array(),
             'POST',
             array(
@@ -32,6 +32,16 @@ class SabadellTpv extends BaseService {
                 'url_ok'            =>  $url_ok,
                 'url_ko'            =>  $url_ko
             ),
+            array()
+        );
+    }
+
+    public function regenerate($id){
+        return $this->call(
+            'services/v2/sabadell/'.$id,
+            array(),
+            'PUT',
+            array(),
             array()
         );
     }
