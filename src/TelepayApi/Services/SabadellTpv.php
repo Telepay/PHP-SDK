@@ -38,7 +38,7 @@ class SabadellTpv extends BaseService {
 
     public function regenerate($id){
         return $this->call(
-            'services/v1/sabadell/generate/'.$id,
+            'services/v1/sabadell/'.$id,
             array(),
             'PUT',
             array(),
