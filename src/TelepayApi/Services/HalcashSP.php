@@ -70,4 +70,14 @@ class HalcashSP extends BaseService {
         );
     }
 
+    public function status($id){
+        return $this->call(
+            'services/v3/halcash_send/'.$id,
+            array(),
+            'GET',
+            array(),
+            array()
+        );
+    }
+
 }
