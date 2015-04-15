@@ -1,5 +1,7 @@
 <?php
-namespace TelepayApi\Services;
+namespace TelepayApi\User;
+
+use TelepayApi\Services\BaseService;
 
 class Wallet extends BaseService {
 

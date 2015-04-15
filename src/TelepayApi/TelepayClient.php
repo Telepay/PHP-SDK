@@ -18,7 +18,7 @@ use TelepayApi\Services\Ukash;
 use TelepayApi\Services\UkashRedemption;
 use TelepayApi\Services\UkashGenerate;
 use TelepayApi\Services\MultivaTpv;
-use TelepayApi\Services\Wallet;
+use TelepayApi\User\Wallet;
 
 
 class TelepayClient{
