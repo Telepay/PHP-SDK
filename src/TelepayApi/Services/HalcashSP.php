@@ -39,7 +39,7 @@ class HalcashSP extends BaseService {
         );
     }
 
-    public function sendV3($phone,$prefix,$country,$amount,$reference,$pin){
+    public function sendV3($phone,$prefix,$country,$amount,$reference,$pin,$sms_language = 'ENG'){
         return $this->call(
             'services/v3/halcash_send',
             array(),
@@ -51,6 +51,7 @@ class HalcashSP extends BaseService {
                 'reference'         =>  $reference,
                 'pin'               =>  $pin,
                 'phone_prefix'      =>  $prefix,
+                'sms_language'      =>  $sms_language
             ),
             array()
         );
