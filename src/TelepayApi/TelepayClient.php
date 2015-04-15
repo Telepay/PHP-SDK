@@ -18,6 +18,7 @@ use TelepayApi\Services\Ukash;
 use TelepayApi\Services\UkashRedemption;
 use TelepayApi\Services\UkashGenerate;
 use TelepayApi\Services\MultivaTpv;
+use TelepayApi\Services\Wallet;
 
 
 class TelepayClient{
@@ -92,6 +93,10 @@ class TelepayClient{
 
     public function getFaircoin(){
         return new Faircoin($this->credentials, $this->url);
+    }
+
+    public function getWallet(){
+        return new Wallet($this->credentials, $this->url);
     }
 
 }
