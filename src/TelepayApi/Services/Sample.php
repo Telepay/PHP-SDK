@@ -3,12 +3,16 @@ namespace TelepayApi\Services;
 
 class Sample extends BaseService {
 
-    public function make(){
+    public function make($param,$amount,$currency){
         return $this->call(
-            'services/v1/sample',
+            'services/v1/echo',
             array(),
-            'GET',
-            array(),
+            'POST',
+            array(
+                'param'          =>  $param,
+                'amount'         =>  $amount,
+                'currency'       =>  $currency
+            ),
             array()
         );
     }
