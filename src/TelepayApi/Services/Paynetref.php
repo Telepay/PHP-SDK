@@ -17,12 +17,10 @@ class Paynetref extends BaseService {
         );
     }
 
-    public function status($client_reference){
+    public function status($id){
         return $this->call(
-            'services/v1/paynet_reference',
-            array(
-                'client_reference' =>  $client_reference
-            ),
+            'services/v1/paynet_reference/'.$id,
+            array(),
             'GET',
             array(),
             array()
