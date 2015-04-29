@@ -17,6 +17,19 @@ class Faircoin extends BaseService {
         );
     }
 
+    public function send($satoshis,$address){
+        return $this->call(
+            'services/v1/fac_send',
+            array(),
+            'POST',
+            array(
+                'amount'    =>  $satoshis,
+                'address'   =>  $address
+            ),
+            array()
+        );
+    }
+
     public function check($id){
         return $this->call(
             'services/v1/fac_pay/'.$id,
