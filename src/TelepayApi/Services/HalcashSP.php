@@ -57,15 +57,13 @@ class HalcashSP extends BaseService {
         );
     }
 
-    public function cancel($country,$reference,$id_telepay){
+    public function cancel($id){
         return $this->call(
-            'services/v1/halcash/cancel',
+            'services/v1/halcash_send/'.$id,
             array(),
             'PUT',
             array(
-                'country'           =>  $country,
-                'reference'         =>  $reference,
-                'id_telepay'        =>  $id_telepay
+                'cancel'   =>  'true'
             ),
             array()
         );
