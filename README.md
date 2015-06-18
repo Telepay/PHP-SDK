@@ -19,6 +19,8 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **Halcash Spain:** sends a hal to a phone or cancel a ticket.
 * **Multiva TPV:** generates a Virtual Tpv for payments with credit card.
 * **Pademobile:** online payments with your online banking credentials.
+* **Sabadell TPV:** generates a Virtual Tpv for payments with credit card.
+* **Abanca TPV:** generates a Virtual Tpv for payments with credit card.
 
 ## Installation
 1. Get the code via clone
