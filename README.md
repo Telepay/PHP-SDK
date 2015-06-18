@@ -4,7 +4,7 @@ This repository is a PHP implementation to interact with the Telepay Financial A
 
 The API control panel are in [https://cp.telepay.net](https://cp.telepay.net)
 
-It provides interaction with many online payment providers like Ukash, PaysafeCard,
+It provides interaction with many online payment providers like PaysafeCard,
 Bank Card, Online Wallets, etc. with a secure authentication and authorization mechanism.
 
 ## The currently implemented services are:
