@@ -19,6 +19,7 @@ use TelepayApi\Services\UkashRedemption;
 use TelepayApi\Services\UkashGenerate;
 use TelepayApi\Services\MultivaTpv;
 use TelepayApi\User\Wallet;
+use TelepayApi\Services\AbancaTpv;
 
 
 class TelepayClient{
@@ -97,6 +98,10 @@ class TelepayClient{
 
     public function getWallet(){
         return new Wallet($this->credentials, $this->url);
+    }
+
+    public function getAbanca(){
+        return new AbancaTpv($this->credentials, $this->url);
     }
 
 }
