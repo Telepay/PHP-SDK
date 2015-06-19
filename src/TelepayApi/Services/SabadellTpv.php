@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class SabadellTpv extends BaseService {
 
-    public function generate($amount,$transaction_id,$description,$url_notification,$url_ok,$url_ko){
+    public function generate($amount, $transaction_id, $description, $url_notification, $url_ok, $url_ko){
         return $this->call(
             'services/v1/sabadell/generate',
             array(),
@@ -11,7 +11,7 @@ class SabadellTpv extends BaseService {
             array(
                 'amount'            =>  $amount,
                 'transaction_id'    =>  $transaction_id,
-                'description'      =>  $description,
+                'description'       =>  $description,
                 'url_notification'  =>  $url_notification,
                 'url_ok'            =>  $url_ok,
                 'url_ko'            =>  $url_ko
@@ -20,14 +20,14 @@ class SabadellTpv extends BaseService {
         );
     }
 
-    public function generateV2($amount,$description,$url_notification,$url_ok,$url_ko){
+    public function generateV2($amount, $description, $url_notification, $url_ok, $url_ko){
         return $this->call(
             'services/v2/sabadell',
             array(),
             'POST',
             array(
                 'amount'            =>  $amount,
-                'description'      =>  $description,
+                'description'       =>  $description,
                 'url_notification'  =>  $url_notification,
                 'url_ok'            =>  $url_ok,
                 'url_ko'            =>  $url_ko

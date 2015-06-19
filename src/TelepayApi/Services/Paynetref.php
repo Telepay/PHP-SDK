@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class Paynetref extends BaseService {
 
-    public function request($client_reference,$amount,$description){
+    public function request($client_reference, $amount, $description, $url_notification = null){
         return $this->call(
             'services/v1/paynet_reference',
             array(),
@@ -11,7 +11,8 @@ class Paynetref extends BaseService {
             array(
                 'client_reference'  =>  $client_reference,
                 'amount'            =>  $amount,
-                'description'       =>  $description
+                'description'       =>  $description,
+                'url_notification'  =>  $url_notification
             ),
             array()
         );

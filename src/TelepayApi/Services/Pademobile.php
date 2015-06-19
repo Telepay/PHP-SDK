@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class Pademobile extends BaseService {
 
-    public function request($country,$url,$description,$amount){
+    public function request($country, $url, $description, $amount, $url_notification = null){
         return $this->call(
             'services/v1/pademobile',
             array(),
@@ -12,7 +12,8 @@ class Pademobile extends BaseService {
                 'country'       =>  $country,
                 'url'           =>  $url,
                 'description'   =>  $description,
-                'amount'        =>  $amount
+                'amount'        =>  $amount,
+                'url_notification'  =>  $url_notification
             ),
             array()
         );
