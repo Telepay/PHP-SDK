@@ -9,6 +9,7 @@ use TelepayApi\Services\Pademobile;
 use TelepayApi\Services\Paynetref;
 use TelepayApi\Services\Paynetservices;
 use TelepayApi\Services\PayU;
+use TelepayApi\Services\PosService;
 use TelepayApi\Services\SabadellTpv;
 use TelepayApi\Services\Safetypay;
 use TelepayApi\Services\Sample;
@@ -102,6 +103,10 @@ class TelepayClient{
 
     public function getAbanca(){
         return new AbancaTpv($this->credentials, $this->url);
+    }
+
+    public function getPos(){
+        return new PosService($this->credentials, $this->url);
     }
 
 }
