@@ -3,7 +3,7 @@ namespace TelepayApi\Services;
 
 class PosService extends BaseService {
 
-    public function generate($amount, $description, $currency, $url_notification, $url_ok, $url_ko, $id){
+    public function generate($amount, $description, $currency, $url_notification, $url_ok, $url_ko, $order_id, $id){
         return $this->call(
             'pos/v1/transaction/'.$id,
             array(),
@@ -14,7 +14,8 @@ class PosService extends BaseService {
                 'currency'          =>  $currency,
                 'url_notification'  =>  $url_notification,
                 'url_ok'            =>  $url_ok,
-                'url_ko'            =>  $url_ko
+                'url_ko'            =>  $url_ko,
+                'order_id'          =>  $order_id
             ),
             array()
         );
