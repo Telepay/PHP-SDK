@@ -3,6 +3,7 @@ namespace TelepayApi;
 
 use TelepayApi\Core\Credentials;
 use TelepayApi\Services\Bitcoin;
+use TelepayApi\Services\EasyPay;
 use TelepayApi\Services\Faircoin;
 use TelepayApi\Services\HalcashSP;
 use TelepayApi\Services\Pademobile;
@@ -107,6 +108,10 @@ class TelepayClient{
 
     public function getPos(){
         return new PosService($this->credentials, $this->url);
+    }
+
+    public function getEasyPay(){
+        return new EasyPay($this->credentials, $this->url);
     }
 
 }

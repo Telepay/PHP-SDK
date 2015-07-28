@@ -22,6 +22,7 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **Sabadell TPV:** generates a Virtual Tpv for payments with credit card.
 * **Abanca TPV:** generates a Virtual Tpv for payments with credit card.
 * **POS Service:** generates a Virtual Tpv for payments with credit card.
+* **EasyPay Service:** generates a reference to pay in the cashier.
 
 ## Installation
 1. Get the code via clone
