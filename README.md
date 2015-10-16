@@ -2,7 +2,7 @@
 
 This repository is a PHP implementation to interact with the Telepay Financial API.
 
-The API control panel are in [https://cp.telepay.net](https://cp.telepay.net)
+The API control panel is in [https://cp.chip-chap.com](https://cp.chip-chap.com)
 
 It provides interaction with many online payment providers like PaysafeCard,
 Bank Card, Online Wallets, etc. with a secure authentication and authorization mechanism.
@@ -19,10 +19,9 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **Halcash Spain:** sends a hal to a phone or cancel a ticket.
 * **Multiva TPV:** generates a Virtual Tpv for payments with credit card.
 * **Pademobile:** online payments with your online banking credentials.
-* **Sabadell TPV:** generates a Virtual Tpv for payments with credit card.
-* **Abanca TPV:** generates a Virtual Tpv for payments with credit card.
 * **POS Service:** generates a Virtual Tpv for payments with credit card.
 * **EasyPay Service:** generates a reference to pay in the cashier.
+* **Cryptocapital Service:** generates a virtual credit card.
 
 ## Installation
 1. Get the code via clone
