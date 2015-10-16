@@ -2,7 +2,7 @@
 
 This repository is a PHP implementation to interact with the Telepay Financial API.
 
-The API control panel is in [https://commerce.chip-chap.com](https://commerce.chip-chap.com)
+The API control panel is in [https://cp.telepay.net](https://cp.telepay.net)
 
 It provides interaction with many online payment providers like PaysafeCard,
 Bank Card, Online Wallets, etc. with a secure authentication and authorization mechanism.
