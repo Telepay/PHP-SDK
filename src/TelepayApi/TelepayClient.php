@@ -3,6 +3,7 @@ namespace TelepayApi;
 
 use TelepayApi\Core\Credentials;
 use TelepayApi\Services\Bitcoin;
+use TelepayApi\Services\Cryptocapital;
 use TelepayApi\Services\EasyPay;
 use TelepayApi\Services\Faircoin;
 use TelepayApi\Services\HalcashSP;
@@ -112,6 +113,10 @@ class TelepayClient{
 
     public function getEasyPay(){
         return new EasyPay($this->credentials, $this->url);
+    }
+
+    public function getCryptocapital(){
+        return new Cryptocapital($this->credentials, $this->url);
     }
 
 }
