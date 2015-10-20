@@ -41,4 +41,14 @@ class Bitcoin extends BaseService {
             array()
         );
     }
+
+    public function checkSend($id){
+        return $this->call(
+            'services/v1/btc_send/'.$id,
+            array(),
+            'GET',
+            array(),
+            array()
+        );
+    }
 }
