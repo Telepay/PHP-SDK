@@ -20,7 +20,8 @@ Bank Card, Online Wallets, etc. with a secure authentication and authorization m
 * **Multiva TPV:** generates a Virtual Tpv for payments with credit card.
 * **Pademobile:** online payments with your online banking credentials.
 * **POS Service:** generates a Virtual Tpv for payments with credit card.
-* **EasyPay Service:** generates a reference to pay in the cashier.
+* **EasyPay Service:** generates a reference to pay from the cashier.
+* **SepaIn Service:** generates a reference to pay with bank transfer.
 * **Cryptocapital Service:** generates a virtual credit card.
 
 ## Installation
