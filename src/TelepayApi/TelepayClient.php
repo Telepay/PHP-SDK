@@ -15,6 +15,7 @@ use TelepayApi\Services\PosService;
 use TelepayApi\Services\SabadellTpv;
 use TelepayApi\Services\Safetypay;
 use TelepayApi\Services\Sample;
+use TelepayApi\Services\SepaIn;
 use TelepayApi\Services\ToditoCash;
 use TelepayApi\Services\TransactionStatus;
 use TelepayApi\Services\Ukash;
@@ -117,6 +118,10 @@ class TelepayClient{
 
     public function getCryptocapital(){
         return new Cryptocapital($this->credentials, $this->url);
+    }
+
+    public function getSepaIn(){
+        return new SepaIn($this->credentials, $this->url);
     }
 
 }
