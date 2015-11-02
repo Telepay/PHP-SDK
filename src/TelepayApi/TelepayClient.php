@@ -16,6 +16,7 @@ use TelepayApi\Services\SabadellTpv;
 use TelepayApi\Services\Safetypay;
 use TelepayApi\Services\Sample;
 use TelepayApi\Services\SepaIn;
+use TelepayApi\Services\SepaOut;
 use TelepayApi\Services\ToditoCash;
 use TelepayApi\Services\TransactionStatus;
 use TelepayApi\Services\Ukash;
@@ -122,6 +123,10 @@ class TelepayClient{
 
     public function getSepaIn(){
         return new SepaIn($this->credentials, $this->url);
+    }
+
+    public function getSepaOut(){
+        return new Sepaout($this->credentials, $this->url);
     }
 
 }
