@@ -40,4 +40,24 @@ class PosService extends BaseService {
         );
     }
 
+    public function generateV3($amount, $description, $currency_in, $currency_out, $url_notification, $url_ok, $url_ko, $order_id, $id, $signature){
+        return $this->call(
+            'pos/v2/transaction/'.$id,
+            array(),
+            'POST',
+            array(
+                'amount'            =>  $amount,
+                'concept'           =>  $description,
+                'currency_in'       =>  $currency_in,
+                'currency_out'      =>  $currency_out,
+                'url_notification'  =>  $url_notification,
+                'url_ok'            =>  $url_ok,
+                'url_ko'            =>  $url_ko,
+                'order_id'          =>  $order_id,
+                'signature'         =>  $signature
+            ),
+            array()
+        );
+    }
+
 }
